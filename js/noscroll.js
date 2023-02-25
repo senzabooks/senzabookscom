@@ -3,3 +3,19 @@ window.addEventListener('keydown', function(e) {
       e.preventDefault();
     }
   });
+
+
+
+  images_array = [
+    "housenumbers-1.jpg",
+    "housenumbers-2.jpg",
+    "housenumbers-3.jpg",
+    "housenumbers-4.jpg",
+    "housenumbers-5.jpg",
+    "housenumbers-6.jpg",
+  ]
+
+
+  function get_image(){
+
+  }
