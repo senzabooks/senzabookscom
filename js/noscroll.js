@@ -14,8 +14,3 @@ window.addEventListener('keydown', function(e) {
     "housenumbers-5.jpg",
     "housenumbers-6.jpg",
   ]
-
-
-  function get_image(){
-
-  }
