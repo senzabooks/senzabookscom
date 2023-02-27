@@ -15,7 +15,7 @@
     #main-img{
         max-width: 70%;
         max-height: 50%;
-        cursor: e-resize;
+        cursor: pointer;
     }
    
     .main-page{
