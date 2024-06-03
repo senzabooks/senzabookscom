@@ -17,15 +17,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".images img");
     let closestImage = null;
     let closestDistance = Infinity;
-    const scrollTop = window.scrollY || window.pageYOffset;
-    images.forEach((image) => {
-      const rect = image.getBoundingClientRect();
-      const distance = Math.abs(rect.top);
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestImage = image;
-      }
-    });
+    if (window.innerWidth <= 800) {
+      // For screens 800px or less, find the image closest to the center
+      const centerX =
+        imagesContainer.getBoundingClientRect().left +
+        imagesContainer.clientWidth / 2;
+      images.forEach((image) => {
+        const rect = image.getBoundingClientRect();
+        const imageCenterX = rect.left + rect.width / 2;
+        const distance = Math.abs(centerX - imageCenterX);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestImage = image;
+        }
+      });
+    } else {
+      // For screens wider than 800px, find the image closest to the top
+      const scrollTop =
+        imagesContainer.scrollTop || window.scrollY || window.pageYOffset;
+      images.forEach((image) => {
+        const rect = image.getBoundingClientRect();
+        const distance = Math.abs(
+          rect.top - imagesContainer.getBoundingClientRect().top
+        );
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestImage = image;
+        }
+      });
+    }
     return closestImage;
   }
 
