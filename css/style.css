@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "FragmentMono";
+  src: url(FragmentMono-Regular.woff2);
+}
+
+body {
+  max-width: 600px;
+  margin: 0 auto !important;
+  float: none !important;
+  background: yellow;
+  animation: animate 3s infinite;
+}
+@keyframes animate {
+  0%{background:rgb(0, 255, 255);}
+  10%{background:red;}
+  20%{background:yellow;}
+  30%{background:lime;}
+  40%{background: rgb(38, 0, 255);}
+  50%{background:rgb(255, 54, 175);}
+  60%{background:rgb(46, 119, 65);}
+  70%{background:rgb(99, 68, 132);}
+  80%{background:rgb(232, 137, 197);}
+  90%{background: purple;}
+  0%{background:rgb(0, 255, 255);}
+}
+
+#main-img {
+  max-width: 70%;
+  max-height: 30%;
+  transform: rotate(0deg);
+  transition: all 4s;
+  cursor: pointer;
+  mix-blend-mode: multiply;
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 17px;
+  color: rgb(31, 31, 31);
+  min-height: 100vh;
+}
+
+a:link {
+  color: rgb(25, 25, 25);
+  background-color: transparent;
+}
+
+.info {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  color: rgb(31, 31, 31);
+  line-height: 18px;
+  border: none;
+  outline: none;
+  width: auto;
+  background: none;
+}
